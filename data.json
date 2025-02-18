@@ -1,0 +1,32 @@
+{
+  "commands": [
+    {
+      "insert": {
+        "disconnected": false,
+        "entry-point": "DEFAULT",
+        "out-identifier": "out-1234",
+        "return-object": false,
+        "object": {
+          "com.MySpace.test.TestDO": {
+            "name": "John Doe",
+            "age": 30
+          }
+        }
+      }
+    },
+    {
+      "fire-all-rules": {
+        "max": 100,
+        "out-identifier": "firedActivations"
+      }
+    },
+    {
+      "get-objects": {
+        "out-identifier": "out"
+      }
+    },
+    {
+      "dispose": {}
+    }
+  ]
+}
