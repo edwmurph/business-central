@@ -15,3 +15,9 @@ https://github.com/jboss-dockerfiles/business-central/tree/main/showcase
 https://www.jbpm.org/learn/gettingStartedUsingDocker.html
 
 https://quay.io/repository/kiegroup/business-central-workbench-showcase?tab=tags&tag=latest
+
+Learn Business Central:
+https://www.ibm.com/docs/en/ibamoe/8.0.x
+
+Installation on EAP:
+https://www.ibm.com/docs/en/ibamoe/8.0.x?topic=configuring-installing-red-hat-jboss-eap
