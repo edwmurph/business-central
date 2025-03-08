@@ -1,15 +1,9 @@
-# almost worked but business central ui not showing up
+# docker login https://registry.redhat.io
 services:
   business_central:
-    # docker login https://registry.redhat.io
-    image: "registry.redhat.io/ibm-bamoe/bamoe-businesscentral-rhel8:8.0.6"
-    # force emulation
+    build: ./business-central
+    image: business-central
     platform: linux/amd64
-    environment:
-      # Force the server to use the standard standalone config rather than the openshift one,
-      # which avoids duplicate 'security' elements.
-      - JBOSS_CONFIG=standalone.xml
     ports:
       - "8080:8080"
-      - "8443:8443"
-      - "8778:8778"
+      - "9990:9990"

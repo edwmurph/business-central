@@ -1,8 +1,0 @@
-services:
-  business_central:
-    image: registry.redhat.io/ibm-bamoe/bamoe-businesscentral-rhel8
-    ports:
-      - "8080:8080"
-      - "8443:8443"
-      - "8778:8778"
-    platform: linux/amd64
