@@ -5,6 +5,10 @@ services:
     image: "registry.redhat.io/ibm-bamoe/bamoe-businesscentral-rhel8:8.0.6"
     # force emulation
     platform: linux/amd64
+    environment:
+      # Force the server to use the standard standalone config rather than the openshift one,
+      # which avoids duplicate 'security' elements.
+      - JBOSS_CONFIG=standalone.xml
     ports:
       - "8080:8080"
       - "8443:8443"

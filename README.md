@@ -2,8 +2,22 @@
 
 ## Getting Started
 
+1. Build bamoe image:
+
+```bash
+docker buildx build --platform=linux/amd64 -t bamoe .
 ```
-docker run -p 8080:8080 -p 8001:8001 -d --name jbpm-server-full jboss/jbpm-server-full:latest
+
+2. Run the bamoe image:
+
+```bash
+docker run --platform=linux/amd64 -p 8080:8080 bamoe
+```
+
+or start interactive shell:
+
+```bash
+docker run -it --platform=linux/amd64 bamoe
 ```
 
 ## References
@@ -21,3 +35,12 @@ https://www.ibm.com/docs/en/ibamoe/8.0.x
 
 Installation on EAP:
 https://www.ibm.com/docs/en/ibamoe/8.0.x?topic=configuring-installing-red-hat-jboss-eap
+
+Guide:
+https://community.ibm.com/community/user/automation/blogs/marco-antonioni/2022/09/24/setup-ibm-process-automation-manager-open-edition
+
+Downloads:
+https://early-access.ibm.com/software/support/trial/cst/programwebsite.wss?siteId=1856&tabId=5158&p=&h=null
+
+Worked:
+https://github.com/timwuthenow/ibamoe-setup/tree/main
