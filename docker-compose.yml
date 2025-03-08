@@ -1,6 +1,6 @@
 # docker login https://registry.redhat.io
 services:
-  business_central:
+  'business-central':
     build: ./business-central
     image: business-central
     platform: linux/amd64
