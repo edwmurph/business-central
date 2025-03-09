@@ -1,9 +1,16 @@
 # docker login https://registry.redhat.io
 services:
-  'business-central':
-    build: ./business-central
-    image: business-central
+  # 'business-central':
+  #   build: ./business-central
+  #   image: business-central
+  #   platform: linux/amd64
+  #   ports:
+  #     - "8080:8080"
+  #     - "9990:9990"
+  'kie-server':
+    build: ./kie-server
+    image: kie-server
     platform: linux/amd64
     ports:
-      - "8080:8080"
-      - "9990:9990"
+      - "8081:8080"
+      - "9991:9990"
