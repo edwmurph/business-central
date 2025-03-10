@@ -2,6 +2,12 @@
 
 ## Getting Started
 
+0. Login to red hat container registry:
+
+```bash
+docker login https://registry.redhat.io
+```
+
 1. Build bamoe image:
 
 ```bash
@@ -18,6 +24,14 @@ or start interactive shell:
 
 ```bash
 docker run -it --platform=linux/amd64 bamoe
+```
+
+## EAP
+
+```bash
+/opt/eap/bin/jboss-cli.sh --connect
+
+/subsystem=ejb3:read-resource(recursive=true)
 ```
 
 ## References

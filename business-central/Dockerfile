@@ -6,9 +6,9 @@ RUN microdnf install vim sed
 
 COPY bamoe-8.0.1-business-central-eap7-deployable.zip /tmp/
 
-RUN unzip -o /tmp/bamoe-8.0.1-business-central-eap7-deployable.zip -d /tmp
-
-RUN rsync -av /tmp/jboss-eap-7.4/. /opt/eap/ && rm -rf /tmp/jboss-eap-7.4
+RUN unzip -o /tmp/bamoe-8.0.1-business-central-eap7-deployable.zip -d /tmp \
+  && rsync -av /tmp/jboss-eap-7.4/. /opt/eap/ \
+  && rm -rf /tmp/jboss-eap-7.4
 
 RUN /opt/eap/bin/jboss-cli.sh --commands="embed-server --std-out=echo,/subsystem=elytron/filesystem-realm=ApplicationRealm:add-identity(identity=admin),/subsystem=elytron/filesystem-realm=ApplicationRealm:set-password(identity=admin, clear={password=admin}),/subsystem=elytron/filesystem-realm=ApplicationRealm:add-identity-attribute(identity=admin, name=role, value=[admin,rest-all,kie-server])"
 
