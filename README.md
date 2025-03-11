@@ -2,28 +2,16 @@
 
 ## Getting Started
 
-0. Login to red hat container registry:
+1. Login to red hat container registry:
 
 ```bash
 docker login https://registry.redhat.io
 ```
 
-1. Build bamoe image:
+2. Run containers
 
 ```bash
-docker buildx build --platform=linux/amd64 -t bamoe .
-```
-
-2. Run the bamoe image:
-
-```bash
-docker run --platform=linux/amd64 -p 8080:8080 bamoe
-```
-
-or start interactive shell:
-
-```bash
-docker run -it --platform=linux/amd64 bamoe
+docker compose up
 ```
 
 ## EAP
